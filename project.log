@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.7.30) (preloaded format=pdflatex 2022.8.11)  8 SEP 2022 13:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.7.30) (preloaded format=pdflatex 2022.8.11)  23 SEP 2022 02:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -323,7 +323,7 @@ Overfull \hbox (1.1629pt too wide) in paragraph at lines 158--159
 [10] [11] [12] [13] [14] [15] [16] (project.aux) ) 
 Here is how much of TeX's memory you used:
  2568 strings out of 478337
- 38924 string characters out of 2846484
+ 38964 string characters out of 2846484
  345113 words of memory out of 3000000
  21006 multiletter control sequences out of 15000+600000
  473082 words of font info for 43 fonts, out of 8000000 for 9000
