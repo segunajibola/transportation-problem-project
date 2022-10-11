@@ -283,13 +283,13 @@ The objective function is gotten by the sum product of the cost per unit per km 
 
 The objective function to minimize is denoted by M in this project work.
 
- \[M = \sum_{i=1}^{m} \sum_{j=1}^{b} Cij Xij \]
+ \[M = \sum_{i=1}^{m} \sum_{j=1}^{n} Cij Xij \]
  
 Subject to
 
- \[M = \sum_{j=1}^{n} Xij = Sij. For  i = 1, 2, ...a \]
+ \[M = \sum_{j=1}^{n} Xij = Sij. For  i = 1, 2, ...m \]
 
- \[M = \sum_{i=1}^{m} Xij = Dij. For j = 1, 2, ...b\]
+ \[M = \sum_{i=1}^{m} Xij = Dij. For j = 1, 2, ...n\]
 
 /// input later///
 A transportation problem said to be balanced if the
@@ -311,33 +311,25 @@ The constraints are formulated concerning the demand and supply.. The importance
 
 3. TYPES OF TRANSPORTAION PROBLEM
 
-There are two different types of transportation problems based on the initial given information:
+There are two  types of transportation problems based on the problem:
 
-Balanced Transportation Problems: cases where the total supply is equal to the total demand.
-Unbalanced Transportation Problems: cases where the total supply is not equal to the total demand. When the supply is higher than the demand, a dummy destination is introduced in the equation to make it equal to the supply (with shipping costs of $0); the excess supply is assumed to go to inventory. On the other hand, when the demand is higher than the supply, a dummy source is introduced in the equation to make it equal to the demand (in these cases there is usually a penalty cost associated for not fulfilling the demand).
+1. Balanced Transportation Problems: The Transportation problem is balanced when the total supply is equal to the total demand. For example, if a retail outlet demands for 50 bags of purewater, and 50 bags was transported, the optimization method used will be balanced.
 
-Balance Transportation Problem
-
-Balanced Transportation Problem is a transportation problem where the total availability at the origins is equal to the total requirements at the destinations.
-For example, in case the total production of 4 factories is 1000 units and total requirements of 4 warehouses is also 1000 units, the transportation problem is said to be a balanced one.
-A necessary and sufficient condition for the existence of a feasible solution to the transportation problem is that n j j m i ai b 1 1 
-i=1mai =  j=1nbj
-Remark. The set of constraints j m i Xij b 1 and i n j Xij a 1
-i=1mXij=ai         and         j=1nXij=bj
-represents m+n equations in m*n non-negative variables. Each variable Xij appears in exactly two constraints, one is associated with the origin and the other is associated with the destination.
+\[\sum_{i=1}^{m} Ai = \sum_{j=1}^{n}Bj \]
 
 
-2. Unbalanced Transportation Problem 
-Unbalanced Transportation Problem is a transportation problem where the total availability at the origins is not equal to the total requirements at the destinations.
-For example, in case the total production of 4 factories is 1000 units, and total requirements of 4 warehouses is 900 units or 1,100 units, the transportation problem is said to be an unbalanced one. To make an unbalanced transportation problem, a balanced one, a dummy origin(s) or a dummy destination(s) is introduced with zero transportation cost per unit.
-If      i=1mai ≠  j=1nbj
-The transportation problem is known as an unbalanced transportation problem. There are of two cases 
-Case(1):
-i=1mai >  j=1nbj
-Case (2): 
-i=1mai <  j=1nbj
-Then, we introduce a dummy origin or dummy destination in the transportation table; the cost associated with this origin or destination is set equal to zero. The availability at this origin is:
-i=1mai-  j=1nbj     =   0
+2. Unbalanced Transportation Problems: The Transportation problem is not balanced when the total supply is not equal to the total demand. For example, 50 bags of water is demanded and 40 or 60 bags is supplied.
+
+\[\sum_{i=1}^{m} Ai \neq \sum_{j=1}^{n}Bj \]
+
+\[\sum_{i=1}^{m} Ai > \sum_{j=1}^{n}Bj \]
+
+\[\sum_{i=1}^{m} Ai < \sum_{j=1}^{n}Bj \]
+
+When the supply is higher than the demand, a dummy destination is introduced in the equation to make it equal to the supply (with 0 shipping costs) and when the demand is higher than the supply, a dummy source is introduced in the equation to make it equal to the demand.
+
+To proceed with the solution of transportation problems, the first step is to check if it is balanced or not.
+
 
 3.5 DEGENCY IN TRANSPORTATION PROBLEM 
 Degeneracy exists in a transportation problem when the number of filled cells is less than the number of rows plus the number of columns minus one (m + n - 1). Degeneracy may be observed either during the initial allocation when the first entry in a row or column satisfies both the row and column requirements or during the Stepping stone method application, when the added and subtracted values are equal.
@@ -371,7 +363,7 @@ Step 3. Test the initial solution for optimality. Using any of the following met
 Stepping Stone Method 
 ii. Modified Distribution Method (MODI).
 If the solution is optimal then stop, otherwise, determine a new improved solution. 
-Step 4. Updating the solution (Repeat Step 3 until the optimal solution is arrived at)
+Step 4. Updating the solution (Repeat Step 3 until the optimal solution is arrived at).
 
 
 
